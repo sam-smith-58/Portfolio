@@ -1,0 +1,47 @@
+.header-background {
+    background-color: #25283D;
+}
+
+h1 {
+    position: relative;
+    top: .25em;
+}
+
+.vicious-cycles {
+    text-align: center;
+}
+
+.example1 {
+    background-color: #CAE5FF;
+    margin-top: 1em;
+}
+
+.example1 a {
+    display: block;
+    text-align: center;
+    color: black;
+}
+
+.example1 a:hover {
+    color: magenta;
+}
+
+img {
+    max-width: 80vw;
+    padding-top: 1em;
+}
+
+p {
+    padding: 0 2em 3em 2em;
+}
+
+section {
+    background-color: #ffcfff;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.footer {
+    position: relative;
+    bottom: 1.5em;
+}

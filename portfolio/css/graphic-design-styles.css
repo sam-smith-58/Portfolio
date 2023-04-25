@@ -1,0 +1,460 @@
+/* Global Styles
+------------------------------------- */
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header {
+    background-color: #25283D;
+    color: #eef7ff;
+    text-align: left;
+    padding-bottom: .25em;
+}
+header h2 {
+    padding-left: 2em;
+}
+a {
+    color: #eef7ff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img { 
+    max-width: 300px;
+} 
+
+h1{
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    margin: 0;
+    font-size: 4em;
+    padding-left: .5em;
+}
+
+h2 {
+    padding-top: .5em;
+}
+
+body {
+    color: #191716;
+    margin: 0;
+    padding: 0;
+    font-family:'Raleway', sans-serif;
+    font-size: .9em;
+    line-height: 1.5;
+}
+
+/* Navigation Bar
+-------------------------- */
+#menuToggle {
+    width: 100vw;
+    position: relative;
+    right: 20px;
+}
+.nav-link, .nav-link-head {
+    color: #191716;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #ffcfff;
+}
+
+/* location of nav bar and gets rid of bullets */
+nav ul {
+    text-align: left;
+    list-style: none;
+}
+
+/* how the nav items appear */
+nav ul li {
+    display: inline-block;
+    font-weight: bolder;
+    position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+/* how nav items look when hovered over */
+.rounded:hover {
+    border-radius: 4rem;
+}
+#services:hover {
+    border-radius: 4rem;
+}
+
+/* submenu display settings */
+nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: -10000px;
+    width: 150px;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+/* submenu items */
+nav ul li ul li {
+    background-color: #ffffff;
+}
+
+/* submenu items when they're hovered over */
+nav ul li ul li:hover {
+    background-color: #98bcde;
+    border-radius: 0;
+}
+
+/* submenu when hovered */
+nav li:hover ul {
+    display: block;
+    left: 0px;
+}
+
+/* Portfolio Items
+------------------------- */
+
+.portfolio {
+    background-color: #CAE5FF;
+    padding: 1em;
+}
+
+.portfolio-item {
+    border-bottom: 3px solid white;
+    padding-bottom: 1em;
+}
+figcaption {
+    padding-top: 1em;
+    text-align:justify;
+}
+/* Aside info ------------------*/
+.more {
+    background-color: #ffcfff;
+    padding: .5em 1em 1em 1em;
+}
+
+
+
+
+/* *Contact Info 
+--------------------------*/
+footer {
+    background-color: #25283D;
+    color: #eef7ff;
+    text-align: left;
+}
+footer h2 {
+    position: relative;
+    left: 1em;
+    font-family: 'Pacifico';
+    font-size: 3em;
+}
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list a {
+    padding: 15px;
+    display: inline-block;
+}
+/* Site width */
+.site {
+    max-width: 630px;
+}
+
+/* Hamburger menu for smaller sizes
+---------------------------------- */
+@media screen and (max-width: 630px){
+    .site {
+        overflow-x: hidden;
+        background-color: #25283D;
+    }
+    header {
+        text-align: center;
+        padding-right: 1em;
+        margin: 0 50px 10px 70px;
+    }
+    .nav-bar {
+        background-color: none;
+    }
+    #menuToggle
+    {
+    display: block;
+    position: relative;
+    top: 60px;
+    left: 15px;
+    
+    z-index: 1;
+
+    
+    -webkit-user-select: none;
+    user-select: none;
+    }
+
+    #menuToggle a
+    {
+    text-decoration: none;
+    color: #232323;
+    
+    transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover
+    {
+    color: white;
+    }
+
+
+    #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+    }
+
+    #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: rgb(200, 135, 200);
+    border-radius: 3px;
+    
+    z-index: 1;
+    transform-origin: 4px 0px;
+  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+    
+    }
+
+    #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+    }
+
+    #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 40px;
+    padding-top: 125px;
+    
+    background: #ffcfff;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    /* slides menu in */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+    /* how nav items look when hovered over */
+    nav ul li:hover {
+    background-color: plum;
+    }
+
+    /* submenu display settings */
+    nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: -10000px;
+    width: 150px;
+    }
+
+    /* submenu items */
+    nav ul li ul li {
+    background-color: plum;
+    display: block;
+    z-index: 1;
+    }
+
+    /* submenu items when they're hovered over */
+    nav ul li ul li:hover {
+        background-color: #98bcde;
+    }
+
+    /* submenu when hovered */
+    nav li:hover ul {
+        display: block;
+        left: 0px;
+    }
+}
+
+/* Grid: medium size
+---------------------------- */
+@supports (grid-area: auto) {
+    @media screen and (min-width: 631px){
+        img {
+            max-width: 200px;
+        }
+        .site {
+            display: grid;
+            grid-template-columns: 20em 22em;
+            grid-template-rows: repeat(3, auto) 30em 12em repeat (4, auto);
+            gap: .5em;
+            max-width: none;
+            padding: none;
+            overflow-x: hidden;
+        }
+        .nav-bar {
+            grid-column: span 3;
+        }
+        .masthead {
+            grid-column: span 3;
+        }
+        #boxer {
+            grid-column: 2/4;
+        }
+        #hockney {
+            grid-column: 2/4;
+        }
+        #claus {
+            grid-column: 1/2;
+        }
+        #castile {
+            grid-column: 1/2;
+        }
+        #self-portrait {
+            grid-column: 2/4;
+        }
+        footer {
+            grid-column: 2/4;
+        }
+        .more {
+            grid-column: 1/2;
+        }
+        .portfolio-item {
+            border-bottom: none;
+        }
+        #checkbox {
+            display: none;
+        }
+        #menuToggle a
+        {
+        text-decoration: none;
+        color: #232323;
+        
+        transition: color 0.3s ease;
+        }
+    
+        #menuToggle a:hover
+        {
+        color: white;
+        }
+        nav ul li:hover {
+            background-color: plum;
+            border-radius: 4rem;
+        }
+        nav ul li ul li {
+            background-color: plum;
+            display: block;
+            z-index: 1;
+        }
+    }
+    /* Grid: large size
+    --------------------------- */
+    @media screen and (min-width: 960px) {
+        .site {
+            display: grid;
+            grid-template-columns: 700px 300px;
+            grid-template-rows: repeat(3, auto) 30em 12em auto;
+            gap: 1em 1em;
+            max-width: none;
+            padding: none;
+            overflow-x: hidden;
+        }
+        .portfolio-item {
+            border-bottom: none;
+        }
+        .nav-bar {
+            grid-column: 1/4;
+        }
+        .masthead {
+            grid-column: 1/4;
+        }
+        
+        #car {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        #car img {
+            max-width: 600px;
+        }
+        #boxer {
+            grid-row: 3/4;
+            grid-column: 2/4;
+        }
+        #claus {
+            grid-row: 4/5;
+        }
+        #hockney {
+            grid-row: 4/5;
+            grid-column: 2/4;
+        }
+        #castile {
+            grid-row: 6/7;
+        }
+        #self-portrait {
+            grid-column: 2/4;
+        }
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            padding-left: 2em;
+            
+        }
+        footer {
+            grid-column: 1/4;
+            grid-row: inherit;
+        }
+        .more {
+            grid-column: 1/4;
+            grid-row: 5/6;
+        }
+        #menuToggle a
+        {
+        text-decoration: none;
+        color: #232323;
+        
+        transition: color 0.3s ease;
+        }
+    
+        #menuToggle a:hover
+        {
+        color: white;
+        }
+        
+    }
+}

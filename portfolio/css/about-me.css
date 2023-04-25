@@ -1,0 +1,53 @@
+.header-background {
+    background-color: #25283D;
+}
+
+/* Education
+----------------------- */
+.education {
+    padding-bottom: 50px;
+    background-color: #CAE5FF;
+}
+
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.item-details h3 + p {
+    font-style: italic;
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+header h3 {
+    padding-left: 2em;
+}
+
+img {
+    max-width: 40vw;
+}
+.selfie {
+    text-align: center;
+}
+
+.background-info {
+    background-color: #ffe5ff;
+}
+
+.background-info img {
+    padding-top: 2em;
+}
+.background-info p {
+    text-align: justify;
+}
