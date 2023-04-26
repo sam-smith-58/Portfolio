@@ -49,3 +49,9 @@ h1, h2 {
 header h3 {
     padding-left: 2em;
 }
+
+.work-experience h2 {
+    padding-left: 1em;
+    position: relative;
+    top: 1em;
+}
